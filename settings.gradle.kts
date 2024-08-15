@@ -1,5 +1,4 @@
 pluginManagement {
-    includeBuild("convention-plugins")
     repositories {
         google()
         mavenCentral()
@@ -16,3 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "multiplatform-library-template"
 include(":library")
+include(":api")
+include(":impl")
+include(":variantA")

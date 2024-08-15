@@ -30,15 +30,20 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                compileOnly(project(":api"))
-                //put your multiplatform dependencies here
+                implementation(project(":library"))
+                implementation(project(":impl"))
+            }
+        }
+        val commonTest by getting {
+            dependencies {
+                implementation(libs.kotlin.test)
             }
         }
     }
 }
 
 android {
-    namespace = "org.jetbrains.kotlinx.multiplatform.library.template"
+    namespace = "org.jetbrains.kotlinx.multiplatform.library.variantA"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
