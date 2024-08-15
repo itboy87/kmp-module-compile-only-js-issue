@@ -30,7 +30,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                compileOnly(project(":api"))
+                implementation(project(":api"))
                 //put your multiplatform dependencies here
             }
         }
